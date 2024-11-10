@@ -3,7 +3,7 @@ mysql -h clonedb.cnqego2u43e5.ap-south-1.rds.amazonaws.com-P 3306 -u admin -p
 
 
 Website
-http://<EC2-Public-IP>:5000
+http://13.233.194.124:5000
 
 
 Open EC2 commands
