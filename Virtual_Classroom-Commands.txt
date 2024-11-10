@@ -7,7 +7,7 @@ http://<EC2-Public-IP>:5000
 
 
 Open EC2 commands
-ssh -i "<yourkey.pem" ec2-user@<EC2-Public-IP>
+ssh -i "<clone.pem" ec2-user@13.233.194.124
 source venv/bin/activate
 cd <git_repositorie_name>
 python3 app.py
