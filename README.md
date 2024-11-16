@@ -1,5 +1,5 @@
 
-# NM Project
+# Virtual Classroom
 
 This project aims on building a simple and easy to use Virutal Classroom using flask and hosting it on AWS
 
@@ -46,3 +46,6 @@ Programming Language: Python
 Framework: Flask (for web-based functionality)  
 Database: MySQL (for storing data)  
 Front-End: HTML, CSS (for the user interface)  
+
+##  
+#### For a detailed demostration refer to the youtube video given
