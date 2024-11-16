@@ -13,7 +13,7 @@ https://youtu.be/v79g3HZuXH8
 
 Before you begin, ensure you have the following:
 
-Operating System: Linux, macOS, or Windows
+Operating System: Linux, macOS, or Windows\n
 Python: Version 3.8 or higher
 Dependencies: Listed in requirements.txt
 Accounts: AWS, GitHub
