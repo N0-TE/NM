@@ -13,10 +13,10 @@ https://youtu.be/v79g3HZuXH8
 
 Before you begin, ensure you have the following:
 
-Operating System: Linux, macOS, or Windows\n
-Python: Version 3.8 or higher
-Dependencies: Listed in requirements.txt
-Accounts: AWS, GitHub
+Operating System: Linux, macOS, or Windows  
+Python: Version 3.8 or higher  
+Dependencies: Listed in requirements.txt  
+Accounts: AWS, GitHub  
 
 ### Installation
 
@@ -35,15 +35,14 @@ Accounts: AWS, GitHub
 
 ## Usage
 
-1. [Step 1: How to run/start the project]
-   ```bash
+1. How to run/start the project
+   ```bash/zsh
    python app.py
    ```
-2. [Optional: Provide an example or screenshot]
-
+   
 ## Technologies Used
 
-Programming Language: Python
-Framework: Flask (for web-based functionality)
-Database: MySQL (for storing data)
-Front-End: HTML, CSS (for the user interface)
+Programming Language: Python  
+Framework: Flask (for web-based functionality)  
+Database: MySQL (for storing data)  
+Front-End: HTML, CSS (for the user interface)  
