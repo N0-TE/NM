@@ -1,13 +1,12 @@
 My sql link
-mysql -h clonedb.cnqego2u43e5.ap-south-1.rds.amazonaws.com-P 3306 -u admin -p
+mysql -h <url> 3306 -u admin -p
 
 
 Website
-http://13.233.194.124:5000
-
+<website_url>
 
 Open EC2 commands
-ssh -i "<clone.pem" ec2-user@13.233.194.124
+ssh -i "<secret_key>" ec2-user@<website_ip>
 source venv/bin/activate
 cd <git_repositorie_name>
 python3 app.py
