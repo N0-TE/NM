@@ -7,24 +7,31 @@ app.secret_key = 'temporary_key'
 
 def get_db_connection():
     return mysql.connector.connect(
-        host='clonedb.cnqego2u43e5.ap-south-1.rds.amazonaws.com',
-        user='admin',
-        password='hailamazonrds',
-        database='clone_db'
+        host='', #Enter your host address
+        user='', #Enter you username
+        password='', #Enter you password
+        database='' #Enter you db name
     )
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
+        #Getting Username and Passsword
         username = request.form['username']
         password = request.form['password']
+
+        #Hashing password
         hashed_password = generate_password_hash(password, method='sha256')
+
+        #Enstablshing connection with MySQL
         conn = get_db_connection()
         cursor = conn.cursor()
         cursor.execute(
             'INSERT INTO users (username, password_hash) VALUES (%s, %s)',
             (username, hashed_password)
         )
+
+        #Terminate elstablished connections
         conn.commit()
         cursor.close()
         conn.close()
@@ -36,9 +43,11 @@ def register():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        password = request.form['password']
+        #Getting Username and Passsword
         username = request.form['username']
         password = request.form['password']
+
+        #Enstablshing connection with MySQL
         conn = get_db_connection()
         cursor = conn.cursor()
         cursor.execute('SELECT password_hash FROM users WHERE username = %s', (username,))
@@ -46,6 +55,8 @@ def login():
         result = cursor.fetchone()
         cursor.close()
         conn.close()
+
+        #Validating user given passowrd 
         if result and check_password_hash(result[0], password):
             return redirect(url_for('dashboard'))
         else:
@@ -56,9 +67,10 @@ def login():
 # Dashboard Route (after login)
 @app.route('/dashboard')
 def dashboard():
+    #Enter course url
     course_urls = [
-        'https://clonebucket0.s3.ap-south-1.amazonaws.com/UNIT+4.pdf',
-        'https://clonebucket0.s3.ap-south-1.amazonaws.com/UNIT+5.pdf'
+        '',
+        ''
     ]
     return render_template('dashboard.html', course_urls=course_urls)
 
