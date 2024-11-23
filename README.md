@@ -49,3 +49,4 @@ Front-End: HTML, CSS (for the user interface)
 
 ##  
 #### For a detailed demostration refer to the youtube video given
+#### All the neccessary commands are in the Virtual_Classroom-Commands.txt file
